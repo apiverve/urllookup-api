@@ -1,0 +1,35 @@
+{
+  "name": "@apiverve/urllookup",
+  "version": "1.1.12",
+  "description": "URL Lookup is a simple tool for looking up the location of a URL. It returns the location of the URL provided.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha",
+    "example": "node examples/basic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/urllookup-api.git",
+    "directory": "npm"
+  },
+  "keywords": [
+    "url lookup", "url lookup api", "url lookup tool", "url lookup software", "url lookup service"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/urllookup-api/issues"
+  },
+  "homepage": "https://apiverve.com/marketplace/urllookup?utm_source=npm",
+  "devDependencies": {
+    "mocha": "^11.0.1",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.7"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "promise": "^8.3.0",
+    "axios": "1.13.2"
+  }
+}
