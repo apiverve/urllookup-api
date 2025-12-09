@@ -1,0 +1,84 @@
+openapi: 3.0.4
+info:
+  title: URL Lookup
+  description: URL Lookup is a simple tool for looking up the location of a URL. It returns the location of the URL provided.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/urllookup:
+    post:
+      summary: Lookup URL Location
+      description: URL Lookup is a simple tool for looking up the location of a URL. It returns the location of the URL provided.
+      operationId: urllookup
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  range: ''
+                  country: US
+                  region: ''
+                  city: Cheney
+                  timezone: America/Chicago
+                  state: Kansas
+                  zipcode: '67025'
+                  coordinates:
+                  - 37.751
+                  - -97.822
+                  url: https://www.merriam-webster.com/dictionary/documentation
+                  domain: www.merriam-webster.com
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+                  description: The URL to lookup the location of. Include the https protocol
+                  example: https://www.merriam-webster.com/dictionary/documentation
+              required:
+              - url
+              example:
+                url: https://www.merriam-webster.com/dictionary/documentation
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
