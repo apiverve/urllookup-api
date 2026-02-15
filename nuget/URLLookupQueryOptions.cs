@@ -12,7 +12,6 @@ namespace APIVerve.API.URLLookup
     {
         /// <summary>
         /// The URL to lookup the location of. Include the https protocol
-        /// Example: https://www.google.com
         /// </summary>
         [JsonProperty("url")]
         public string Url { get; set; }
