@@ -48,7 +48,6 @@ namespace APIVerve.API.URLLookup
         public string State { get; set; }
 
         [JsonProperty("zipcode")]
-        [JsonConverter(typeof(ParseStringConverter))]
         public long Zipcode { get; set; }
 
         [JsonProperty("coordinates")]
