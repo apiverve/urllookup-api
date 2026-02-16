@@ -228,8 +228,9 @@ from apiverve_urllookup.apiClient import UrllookupAPIClient
 
 api = UrllookupAPIClient("[YOUR_API_KEY]")
 
+query = { "url": "https://www.merriam-webster.com/dictionary/documentation" }
+
 try:
-    query = { "url": "https://www.merriam-webster.com/dictionary/documentation" }
     result = api.execute(query)
     print(result)
 finally:
