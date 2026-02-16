@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:urllookup-api:1.1.13'
+    implementation 'com.github.apiverve:urllookup-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ URLLookupAPIClient client = new URLLookupAPIClient("YOUR_API_KEY");
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("url", "https://www.google.com");
+    parameters.put("url", "https://www.merriam-webster.com/dictionary/documentation");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
