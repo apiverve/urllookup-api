@@ -134,7 +134,13 @@ async function makeRequest() {
       -97.822
     ],
     "url": "https://www.merriam-webster.com/dictionary/documentation",
-    "domain": "www.merriam-webster.com"
+    "domain": "www.merriam-webster.com",
+    "ip": "104.20.45.199",
+    "countryName": "United States",
+    "continent": "NA",
+    "continentName": "North America",
+    "accuracyRadius": 1000,
+    "isEU": false
   }
 }
 ```
