@@ -55,6 +55,12 @@ paths:
                     - -97.822
                   url: https://www.merriam-webster.com/dictionary/documentation
                   domain: www.merriam-webster.com
+                  ip: 104.20.45.199
+                  countryName: United States
+                  continent: NA
+                  continentName: North America
+                  accuracyRadius: 1000
+                  isEU: false
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
