@@ -4,25 +4,43 @@ declare module '@apiverve/urllookup' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface urllookupResponse {
     status: string;
     error: string | null;
     data: URLLookupData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface URLLookupData {
-      range:       string;
-      country:     string;
-      region:      string;
-      city:        string;
-      timezone:    string;
-      state:       string;
-      zipcode:     string;
-      coordinates: number[];
-      url:         string;
-      domain:      string;
+      range:          null | string;
+      country:        null | string;
+      region:         null | string;
+      city:           null | string;
+      timezone:       null | string;
+      state:          null | string;
+      zipcode:        null | string;
+      coordinates:    (number | null)[];
+      url:            null | string;
+      domain:         null | string;
+      ip:             null | string;
+      countryName:    null | string;
+      continent:      null | string;
+      continentName:  null | string;
+      accuracyRadius: number | null;
+      isEU:           boolean | null;
   }
 
   export default class urllookupWrapper {
