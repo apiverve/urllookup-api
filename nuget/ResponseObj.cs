@@ -25,6 +25,9 @@ namespace APIVerve.API.URLLookup
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -48,15 +51,45 @@ namespace APIVerve.API.URLLookup
         public string State { get; set; }
 
         [JsonProperty("zipcode")]
-        public long Zipcode { get; set; }
+        public long? Zipcode { get; set; }
 
         [JsonProperty("coordinates")]
-        public double[] Coordinates { get; set; }
+        public double?[] Coordinates { get; set; }
 
         [JsonProperty("url")]
         public Uri Url { get; set; }
 
         [JsonProperty("domain")]
         public string Domain { get; set; }
+
+        [JsonProperty("ip")]
+        public string Ip { get; set; }
+
+        [JsonProperty("countryName")]
+        public string CountryName { get; set; }
+
+        [JsonProperty("continent")]
+        public string Continent { get; set; }
+
+        [JsonProperty("continentName")]
+        public string ContinentName { get; set; }
+
+        [JsonProperty("accuracyRadius")]
+        public long? AccuracyRadius { get; set; }
+
+        [JsonProperty("isEU")]
+        public bool? IsEu { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
