@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/urllookup",
-  "version": "1.2.0",
-  "description": "URL Lookup is a simple tool for looking up the location of a URL. It returns the location of the URL provided.",
+  "version": "1.2.2",
+  "description": "URL Lookup resolves any web address to its hosting server IP address, country, and continent in real time. Paid plans add city, state, coordinates, timezone, and EU membership status.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "url lookup", "url lookup api", "url lookup tool", "url lookup software", "url lookup service"
+    "url lookup api", "url location", "geolocate url", "url ip lookup", "find url hosting location"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/urllookup-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/urllookup?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/urllookup?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
