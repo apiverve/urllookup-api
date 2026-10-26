@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/urllookup",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "URL Lookup resolves any web address to its hosting server IP address, country, and continent in real time. Paid plans add city, state, coordinates, timezone, and EU membership status.",
   "main": "index.js",
   "types": "index.d.ts",
